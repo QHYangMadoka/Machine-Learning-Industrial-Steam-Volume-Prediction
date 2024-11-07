@@ -1,6 +1,13 @@
 # Industrial Steam Volume Prediction
 
 This project aims to predict industrial steam volume based on boiler sensor data, originally provided as part of a machine learning competition on the Alibaba Tianchi platform.
+This is my first machine learning project, focusing on predicting industrial steam volume based on boiler sensor data from the Alibaba Tianchi platform. This project is organized into four main parts, each contained in a Jupyter notebook:
+
+1. **Data Exploration**
+2. **Feature Engineering**
+3. **Model Predictions**
+4. **Model Fusion**
+
 
 ## Project Background
 
