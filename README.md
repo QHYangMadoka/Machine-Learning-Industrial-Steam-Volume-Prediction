@@ -34,7 +34,7 @@ Participants are required to submit a text file containing the predicted values 
 ### Prerequisites
 
 - Python 3.x
-- Libraries: `numpy`, `pandas`, `scikit-learn`, `xgboost`, `lightgbm`, `matplotlib`, 
+- Libraries: `numpy`, `pandas`, `scikit-learn`, `xgboost`, `lightgbm`, `matplotlib`, `scipy`, `seaborn`
 
 ### Installation
 
