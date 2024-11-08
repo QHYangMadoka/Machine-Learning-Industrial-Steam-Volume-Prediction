@@ -57,6 +57,22 @@ The datasets are loaded from `zhengqi_train.txt` and `zhengqi_test.txt`. Initial
 Box plots and KDE plots are used for distribution analysis, and a correlation heatmap highlights relationships among features. The processed datasets are merged, labeled, and saved as `processed_zhengqi_data.csv` for further modeling.
 
 
+## 2-Feature Engineering
+
+### Data Preparation and Normalization
+Data is loaded from `processed_zhengqi_data.csv`, normalized using Min-Max scaling and Box-Cox transformation, and split for training and validation. Outliers are detected and removed using Ridge, Lasso, SVR, and XGBoost models, with cleaned data saved as `processed_zhengqi_data2.csv`.
+
+### Dimensionality Reduction and Multicollinearity Check
+Variance Inflation Factor (VIF) analysis checks multicollinearity, and PCA reduces dimensionality to 20 components, creating `train_data_pca.npz` and `test_data_pca.npz` for modeling.
+
+### Initial Model Testing and Results
+Several models are tested to assess predictive performance:
+- **Linear Regression**: Shows potential but may overfit.
+- **K-Nearest Neighbors and Decision Tree**: Poor performance.
+- **Support Vector Regression (SVR)**: Evaluated with Gaussian and polynomial kernels.
+- **LightGBM**: Achieves strong performance with lowest error.
+
+LightGBM demonstrates the best results, while KNN and Decision Tree show limitations.
 
 
 
