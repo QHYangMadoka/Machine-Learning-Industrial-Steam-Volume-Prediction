@@ -77,4 +77,46 @@ LightGBM demonstrates the best results, while KNN and Decision Tree show limitat
 
 
 
+## 3-Model Prediction
+
+### Data Preparation
+Data is loaded in two formats:
+- **Before Dimensionality Reduction**: `processed_zhengqi_data2.csv` is split into training and testing sets.
+- **After Dimensionality Reduction**: PCA-transformed data loaded from `train_data_pca.npz` and `test_data_pca.npz`.
+
+### Model Training and Learning Curves
+For each model, training is conducted on both dimensionality-reduced and non-dimensionality-reduced data. Learning curves are generated to analyze model performance.
+
+1. **Linear Regression**: Shows good performance on both data formats; results are saved as `LinearRegression(DR/NDR).txt`.
+2. **Random Forest**: Performs better on non-reduced data; results saved as `RandomForest(DR/NDR).txt`.
+3. **Support Vector Regression (SVR)**: Kernel variations tested; performs well on reduced data. Results saved as `SVR_rbf/poly(DR/NDR).txt`.
+4. **Gradient Boosting Decision Tree (GBDT)**: Achieves consistent performance across data formats; results saved as `GBDT(DR/NDR).txt`.
+5. **XGBoost**: Trained on both data formats; results saved as `Xgboost(DR/NDR).txt`.
+
+### Conclusion
+Linear regression and SVR perform best on reduced data, while GBDT and ensemble methods perform well on non-reduced data. Further feature exploration and algorithm integration are recommended for enhanced performance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
