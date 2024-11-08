@@ -105,6 +105,25 @@ Linear regression and SVR perform best on reduced data, while GBDT and ensemble 
 
 
 
+## 4-Model Fusion
+
+### Data Loading
+Data is loaded in both dimensionality-reduced and non-dimensionality-reduced forms:
+- **Non-Reduced Data**: Loaded from `processed_zhengqi_data2.csv` and split into training and test sets.
+- **Reduced Data**: PCA-transformed data loaded from `train_data_pca.npz` and `test_data_pca.npz`.
+
+### Hyperparameter Tuning with GridSearchCV
+The `train_model` function optimizes model parameters using GridSearchCV with cross-validation. Models and parameters include:
+1. **Ridge Regression**: Tuning `alpha`.
+2. **Lasso Regression**: Tuning `alpha`.
+3. **Elastic Net**: Tuning `alpha` and `l1_ratio`.
+4. **SVR**: Tuning `C`.
+5. **Gradient Boosting**: Tuning `n_estimators`, `max_depth`, and `min_samples_split`.
+6. **Random Forest**: Tuning `n_estimators`, `max_features`, and `min_samples_split`.
+7. **XGBoost**: Tuning `n_estimators`, `max_depth`, and `reg_lambda`.
+
+### Ensemble Prediction (Bagging)
+The `model_predict` function aggregates predictions from each optimized model to create a final ensemble prediction. Results are saved as `bagging_result.txt`, with each model’s mean and standard deviation performance recorded in `score_models`.
 
 
 
