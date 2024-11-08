@@ -44,6 +44,21 @@ Participants are required to submit a text file containing the predicted values 
 - Python 3.x
 - Libraries: `numpy`, `pandas`, `scikit-learn`, `xgboost`, `lightgbm`, `matplotlib`, `scipy`, `seaborn`
 
+### Project Workflow
+
+This project is structured into four main stages, each with specific objectives and outputs:
+
+1. **Data Exploration**: Analyze data distributions, detect and handle inconsistencies, and prepare a clean dataset for feature engineering.
+2. **Feature Engineering**: Normalize data, detect and remove outliers, and apply dimensionality reduction (PCA) to optimize feature sets.
+3. **Model Prediction**: Train multiple machine learning models, comparing performance on both dimensionality-reduced and non-reduced data.
+4. **Model Fusion**: Use hyperparameter tuning and ensemble methods to enhance model performance, producing a final ensemble prediction.
+
+This organized approach ensures thorough data preparation, model training, and evaluation to maximize prediction accuracy.
+
+<div style="text-align: center;">
+  <img src="./pic/modeling_proccess.png" alt="description">
+</div>
+
 
 
 ## 1-Data Exploration
@@ -127,6 +142,16 @@ The `model_predict` function aggregates predictions from each optimized model to
 
 
 
+## Future Improvements
+
+While the ensemble predictions provide robust results, there are potential areas for further enhancement:
+
+- **Advanced Feature Engineering**: Experiment with additional feature transformations or domain-specific features that may improve predictive accuracy.
+- **Automated Hyperparameter Tuning**: Implement automated tuning techniques (e.g., Bayesian optimization) to refine model parameters.
+- **Time-Series Analysis**: If timestamped data becomes available, applying time-series forecasting techniques could further improve the model's ability to predict steam volume trends.
+- **Model Interpretability**: Explore SHAP or LIME techniques to understand the feature importance and model decisions, which could offer valuable insights for system optimizations.
+
+These steps could help improve both the model's accuracy and the interpretability of the predictions.
 
 
 
