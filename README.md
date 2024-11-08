@@ -12,6 +12,7 @@ This is my first machine learning project, focusing on predicting industrial ste
 ## Project Background
 
 In thermal power generation, steam production is crucial for generating electricity. The basic principle involves burning fuel to heat water, producing high-temperature and high-pressure steam. This steam drives a turbine, which powers an electricity generator. Boiler combustion efficiency is key to overall power generation efficiency. Many factors influence this efficiency, including adjustable boiler parameters and boiler operating conditions.
+
 ![](./pic/Steam_Power_Generation.jpg)
 
 
