@@ -46,6 +46,17 @@ Participants are required to submit a text file containing the predicted values 
 
 
 
+## 1-Data Exploration
+### Project Overview
+This project explores factors affecting boiler combustion efficiency in thermal power generation, with a focus on variables such as fuel feed, draft, water volume, and temperatures.
+
+### Data Loading and Initial Processing
+The datasets are loaded from `zhengqi_train.txt` and `zhengqi_test.txt`. Initial analysis includes examining the structure and statistics of each dataset. After identifying inconsistent distributions in certain features (e.g., `V5`, `V9`, `V11`, `V17`, `V22`), these are removed. Features with a correlation below 0.1 with the target are also dropped.
+
+### Data Visualization and Saving
+Box plots and KDE plots are used for distribution analysis, and a correlation heatmap highlights relationships among features. The processed datasets are merged, labeled, and saved as `processed_zhengqi_data.csv` for further modeling.
+
+
 
 
 
