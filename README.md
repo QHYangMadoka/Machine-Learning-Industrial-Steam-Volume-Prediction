@@ -87,6 +87,12 @@ Data is loaded in two formats:
 ### Model Training and Learning Curves
 For each model, training is conducted on both dimensionality-reduced and non-dimensionality-reduced data. Learning curves are generated to analyze model performance.
 
+<div style="text-align: center;">
+  <img src="./pic/sklearn_cross_validation.png" alt="description">
+</div>
+
+
+
 1. **Linear Regression**: Shows good performance on both data formats; results are saved as `LinearRegression(DR/NDR).txt`.
 2. **Random Forest**: Performs better on non-reduced data; results saved as `RandomForest(DR/NDR).txt`.
 3. **Support Vector Regression (SVR)**: Kernel variations tested; performs well on reduced data. Results saved as `SVR_rbf/poly(DR/NDR).txt`.
